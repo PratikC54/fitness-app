@@ -2,6 +2,9 @@ package com.PratikC54.fitness_app.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.JdbcTypeCode;
 
 import java.time.LocalDateTime;
@@ -10,6 +13,9 @@ import java.util.List;
 import static org.hibernate.type.SqlTypes.JSON;
 
 @Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Recommendation {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
